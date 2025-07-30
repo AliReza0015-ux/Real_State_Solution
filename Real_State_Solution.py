@@ -255,6 +255,7 @@ pickle.dump(dtmodel, open('RE_Model','wb'))
 RE_Model = pickle.load(open('RE_Model','rb'))
 
 # %%
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, stratify=x.property_type_Bunglow)
 np.array(xtrain.loc[22])
 ytrain[22]
 
