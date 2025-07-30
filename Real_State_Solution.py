@@ -179,15 +179,15 @@ dtmodel.feature_names_in_
 # plot the tree
 from sklearn import tree
 
-# Plot the tree with feature names
-tree.plot_tree(dtmodel, feature_names=dtmodel.feature_names_in_)
+# Use this version to avoid errors in Streamlit Cloud
+fig = plt.figure(figsize=(20, 10))
+tree.plot_tree(dtmodel, feature_names=dtmodel.feature_names_in_, filled=True)
+fig.savefig("tree.png", dpi=300)
+plt.close(fig)  # Close the figure to avoid duplicate rendering in Streamlit
 
-#tree.plot_tree(dtmodel)
-#plt.show(dpi=300)
-
-# Save the plot to a file
-plt.savefig('tree.png', dpi=300)
-
+# Optional: if using Streamlit to display
+import streamlit as st
+st.image("tree.png", caption="Decision Tree Structure", use_column_width=True)
 # %% [markdown]
 #     
 
