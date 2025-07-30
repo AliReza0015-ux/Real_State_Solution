@@ -256,9 +256,8 @@ RE_Model = pickle.load(open('RE_Model','rb'))
 
 # %%
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, stratify=x.property_type_Bunglow)
-np.array(xtrain.loc[22])
-ytrain[22]
-
+np.array(x_train.loc[22])
+y_train.iloc[22]
 # %%
 # Use the loaded pickled model to make predictions
 RE_Model.predict([[2012, 216, 74, 1 , 1, 618, 2000, 600, 1, 0, 0, 6, 0]])
