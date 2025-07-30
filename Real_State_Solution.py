@@ -187,7 +187,7 @@ plt.close(fig)  # Close the figure to avoid duplicate rendering in Streamlit
 
 # Optional: if using Streamlit to display
 import streamlit as st
-st.image("tree.png", caption="Decision Tree Structure", use_column_width=True)
+st.image("tree.png", caption="Decision Tree Structure", use_container_width=True)
 # %% [markdown]
 #     
 
